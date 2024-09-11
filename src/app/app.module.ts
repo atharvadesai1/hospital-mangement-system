@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { HomeComponent } from './home/home.component';
 import { MedicineComponent } from './medicine/medicine.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MedicineComponent } from './medicine/medicine.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
