@@ -7,7 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { HomeComponent } from './home/home.component';
 import { MedicineComponent } from './medicine/medicine.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { CreateAppointmentComponent } from './create-appointment/create-appointment.component'; 
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { HttpClientModule } from '@angular/common/http';
     AdminDashboardComponent,
     AppointmentComponent,
     HomeComponent,
-    MedicineComponent
+    MedicineComponent,
+    CreateAppointmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

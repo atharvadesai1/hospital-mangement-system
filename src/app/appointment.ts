@@ -3,5 +3,5 @@ export class Appointment {
     name:string="";
     age:string="";
     phone:string="";
-    sysmptoms:string="";
+    symptoms:string="";
 }

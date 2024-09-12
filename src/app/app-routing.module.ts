@@ -5,12 +5,14 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { AppointmentComponent } from './appointment/appointment.component';
 import { HomeComponent } from './home/home.component';
 import { MedicineComponent } from './medicine/medicine.component';
+import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path: 'admin', component:AdminDashboardComponent},
   {path: 'appointment', component:AppointmentComponent},
-  {path: 'medicine', component:MedicineComponent}
+  {path: 'medicine', component:MedicineComponent},
+  {path: 'create-appointment', component:CreateAppointmentComponent}
 ];
 
 @NgModule({
