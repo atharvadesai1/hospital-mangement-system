@@ -10,7 +10,7 @@ import { Appointment } from './appointment';
 export class AppointmentService {
   constructor(private httpClient:HttpClient) { }
 
-  private baseUrl = "http://localhost:8080/api/v2/"
+  private baseUrl = "http://localhost:8080/api/v2/appointments"
 
   getAllAppointments():Observable<Appointment[]>{
     return this.httpClient.get<Appointment[]>(`${this.baseUrl}`)
@@ -20,6 +20,10 @@ export class AppointmentService {
 
   createAppointments(appointment: Appointment):Observable<Appointment>{
     return this.httpClient.post<Appointment>(`${this.baserUrlInsert}`, appointment)
+  }
+
+  deleteAppintment(id:number):Observable<object>{
+    return this.httpClient.delete(`${this.baseUrl}/${id}`)
   }
 
 }

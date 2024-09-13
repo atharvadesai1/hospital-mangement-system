@@ -29,6 +29,7 @@ export class CreateAppointmentComponent implements OnInit {
     this.saveAppointment();
   }
 
+
   ngOnInit(): void {
   }
 

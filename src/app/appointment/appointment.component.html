@@ -29,7 +29,6 @@
   <hr>
     <h2 style="text-align: center;margin-top: 20PX;">Appointment List</h2>
   <hr>
-  <br>
 <div class="tableFixHead">
   <br>
   <table class="table table-striped">
@@ -40,6 +39,7 @@
         <th>Age</th>    
         <th>Phone Number</th>
         <th>Symptoms</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -49,6 +49,7 @@
           <td>{{pat.age}}</td>
           <td>{{pat.phone}}</td>
           <td>{{pat.symptoms}}</td>
+          <td><button (click)="delete(pat.id)" class="btn btn-danger">Delete</button></td>
         </tr>
       <br>
     </tbody>

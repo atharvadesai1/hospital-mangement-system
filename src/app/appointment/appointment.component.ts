@@ -20,6 +20,13 @@ export class AppointmentComponent implements OnInit {
     })
   }
 
+  delete(id:number){
+    this.appointmentService.deleteAppintment(id).subscribe(data=>{
+      console.log(data);
+      this.getAppointments();
+    })
+  }
+
   ngOnInit(): void {
     this.getAppointments();
   }
