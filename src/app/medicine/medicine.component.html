@@ -3,16 +3,16 @@
     <form>
       <div class="form-group">
         <label for="drug" style="font-size: large; font-weight: 500;">Drug Name</label>
-        <input type="text" name="name" id="drug" class="form-control" placeholder="Enter drug medicine name" required>
+        <input type="text" name="drug" id="drug" class="form-control" placeholder="Enter drug medicine name" [(ngModel)]="medicine.drug" required>
       </div><br>
 
       <div class="form-group">
         <label for="phone" style="font-size: large; font-weight: 500;">Stock</label>
-        <input type="number" name="stock" id="stock" class="form-control" placeholder="Enter total stocks" required>
+        <input type="number" name="stock" id="stock" class="form-control" placeholder="Enter total stocks" [(ngModel)]="medicine.stock" required>
       </div><br>
 
       <div class="form-group text-center">
-        <button type="submit" class="btn btn-primary">Add Medicine</button>
+        <button (click)="submittedMedicine()" type="submit" class="btn btn-primary">Add Medicine</button>
       </div>
     </form>
   </div>

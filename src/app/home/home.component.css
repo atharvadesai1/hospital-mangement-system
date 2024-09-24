@@ -1,0 +1,10 @@
+@font-face {
+    font-family: nice;
+    src: url('src\assets\fonts\Tenada.ttf');
+}
+
+.title{
+    font-family: nice;
+    color: black;
+    font-size: 80px;
+}

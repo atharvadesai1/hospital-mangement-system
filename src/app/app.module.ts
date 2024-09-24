@@ -10,6 +10,10 @@ import { MedicineComponent } from './medicine/medicine.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component'; 
 import { FormsModule } from '@angular/forms';
+import { PatientLoginComponent } from './patient-login/patient-login.component';
+import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { ViewMedicinesComponent } from './view-medicines/view-medicines.component';
+// import { ViewMedicinesComponent } from './view-medicines/view-medicines.component';
 
 
 @NgModule({
@@ -19,7 +23,10 @@ import { FormsModule } from '@angular/forms';
     AppointmentComponent,
     HomeComponent,
     MedicineComponent,
-    CreateAppointmentComponent
+    CreateAppointmentComponent,
+    PatientLoginComponent,
+    DoctorLoginComponent,
+    ViewMedicinesComponent
   ],
   imports: [
     BrowserModule,
