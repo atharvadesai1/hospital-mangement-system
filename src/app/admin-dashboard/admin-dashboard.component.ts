@@ -12,7 +12,7 @@ export class AdminDashboardComponent implements OnInit {
 
   patients:Patient[]=[];
   private router:Router;
-  constructor(private patientService:PatientService) { }
+  constructor(private patientService:PatientService, private route:Router) { }
   
   getPatients(){
     this.patientService.getPatientList().subscribe(data=>{
@@ -25,6 +25,10 @@ export class AdminDashboardComponent implements OnInit {
 
   goToAppointmentList(){
     this.router.navigate(['/appointment']);
+  }
+
+  onLogOut(){
+    this.route.navigate(['home']);
   }
 
   delete(id:number){

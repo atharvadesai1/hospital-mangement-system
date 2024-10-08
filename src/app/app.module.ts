@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
 import { ViewMedicinesComponent } from './view-medicines/view-medicines.component';
+import { DocboardComponent } from './docboard/docboard.component';
 // import { ViewMedicinesComponent } from './view-medicines/view-medicines.component';
 
 
@@ -26,7 +27,8 @@ import { ViewMedicinesComponent } from './view-medicines/view-medicines.componen
     CreateAppointmentComponent,
     PatientLoginComponent,
     DoctorLoginComponent,
-    ViewMedicinesComponent
+    ViewMedicinesComponent,
+    DocboardComponent,
   ],
   imports: [
     BrowserModule,

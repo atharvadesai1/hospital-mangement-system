@@ -1,0 +1,67 @@
+<div class="container mt-5">
+    <div *ngIf="dataAddedSuccessfully" class="alert alert-success" role="alert" style="position: relative;">
+        Data Added Successfully !!
+        <button type="button" class="btn-close float-end" aria-label="Close" (click)="crossClick()"></button>
+    </div>
+    <div class="mx-2">     
+        <button style="margin: 5px; position: absolute; top: 10px; right: 10px;" 
+        class="btn btn-danger" 
+        data-toggle="modal" 
+        data-target="#loginModal" 
+        [routerLink]="['/home']">
+        <a style="color:white;">Logout</a>
+        </button>
+
+        <button style="margin: 50px; position: absolute; top: 10px; left: 20px; background-color: #343a40;" 
+        class="btn btn-dark" 
+        data-toggle="modal" 
+        data-target="#loginModal" 
+        [routerLink]="['/medicine']">
+        <a style="color:white;">Add Medicine</a>
+        </button>
+    </div>
+    <h1 class="text-center mb-4">Doctor's Pannel</h1>
+
+    <hr>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="first_name" style="font-size: large; font-weight: 500;">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter patient's name" [(ngModel)]="docboardData.name" required>
+      </div><br>
+
+      <div class="form-group">
+        <label for="age" style="font-size: large; font-weight: 500;">Age</label>
+        <input type="number" name="age" id="age" class="form-control" placeholder="Enter patient's age" [(ngModel)]="docboardData.age" required>
+      </div><br>
+
+      <div class="form-group">
+        <label for="blood" style="font-size: large; font-weight: 500;">Blood Group</label>
+        <input type="text" name="blood" id="blood" class="form-control" placeholder="Enter patient's Blood Group" [(ngModel)]="docboardData.blood" required>
+      </div><br>
+
+      <div class="form-group">
+        <label for="prescription" style="font-size: large; font-weight: 500;">Prescription</label>
+        <textarea id="prescription" name="prescription" class="form-control" rows="3" placeholder="Enter presecription for patient" [(ngModel)]="docboardData.prescription" required></textarea>
+      </div> <br>
+
+      <div class="form-group">
+        <label for="dose" style="font-size: large; font-weight: 500;">Dose</label>
+        <input type="tel" name="dose" id="dose" class="form-control" placeholder="Enter dose to be taken by patient" [(ngModel)]="docboardData.dose" required>
+      </div><br>
+
+      <div class="form-group">
+        <label for="fees" style="font-size: large; font-weight: 500;">Fees</label>
+        <input type="number" name="fees" id="fees" class="form-control" placeholder="Enter Fees" [(ngModel)]="docboardData.fees" required>
+      </div><br>
+
+      <div class="form-group">
+        <label for="urgency" style="font-size: large; font-weight: 500;">Urgency</label>
+        <input type="tel" name="urgency" id="urgency" class="form-control" placeholder="Enter Fees" [(ngModel)]="docboardData.urgency" required>
+      </div><br>
+
+
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div><br><br>
+    </form>
+</div>

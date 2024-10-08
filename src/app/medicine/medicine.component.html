@@ -1,6 +1,12 @@
 <div class="container mt-5">
+  <div class="d-flex justify-content-start mb-3">
+    <button class="btn btn-secondary" routerLink="/docboard">
+    <i class="fas fa-arrow-left me-2"></i> Back
+    </button>
+  </div>
     <h1 class="text-center mb-4">Add New Medicine</h1>
     <form>
+      <hr>
       <div class="form-group">
         <label for="drug" style="font-size: large; font-weight: 500;">Drug Name</label>
         <input type="text" name="drug" id="drug" class="form-control" placeholder="Enter drug medicine name" [(ngModel)]="medicine.drug" required>
@@ -13,6 +19,11 @@
 
       <div class="form-group text-center">
         <button (click)="submittedMedicine()" type="submit" class="btn btn-primary">Add Medicine</button>
-      </div>
+      </div><br>
+
+      <div *ngIf="dataAddedSuccessfully" class="alert alert-success" role="alert" style="position: relative;">
+        Data Added Successfully !!
+        <button type="button" class="btn-close float-end" aria-label="Close" (click)="crossClick()"></button>
+    </div>
     </form>
   </div>

@@ -18,15 +18,23 @@ export class MedicineComponent implements OnInit {
     this.router.navigate(['/view-medicine'])
   }
 
+  dataAddedSuccessfully = false;
+
   saveMedicine(){
     this.viewMedicinesService.createMedicines(this.medicine).subscribe(data=>{
       console.log(data)
-      this.goToViewMedPage();
+      this.medicine.drug = "";
+      this.medicine.stock = "";
+      this.dataAddedSuccessfully = true;
     })
   }
 
   submittedMedicine(){
     this.saveMedicine();
+  }
+
+  crossClick(){
+    this.dataAddedSuccessfully = false;
   }
 
 

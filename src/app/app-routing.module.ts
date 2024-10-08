@@ -9,6 +9,7 @@ import { CreateAppointmentComponent } from './create-appointment/create-appointm
 import { PatientLoginComponent } from './patient-login/patient-login.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
 import { ViewMedicinesComponent } from './view-medicines/view-medicines.component';
+import { DocboardComponent } from './docboard/docboard.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -19,8 +20,8 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'admin-login', component:PatientLoginComponent},
   {path: 'doctor-login', component:DoctorLoginComponent},
-  {path: 'view-medicine', component:ViewMedicinesComponent}
- 
+  {path: 'view-medicine', component:ViewMedicinesComponent},
+  {path: 'docboard', component:DocboardComponent}
 ];
 
 @NgModule({

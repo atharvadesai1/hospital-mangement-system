@@ -9,19 +9,24 @@
         </div>
         <div class="card shadow-lg">
           <div class="card-body">
-            <h3 class="card-title text-center mb-4">Admin Login</h3>
+            <h3 class="card-title text-center mb-4">Doctor Login</h3>
   
             <form>
               <!-- User ID Field -->
               <div class="form-group mb-3">
                 <label for="userid">User ID</label>
-                <input type="text" class="form-control" id="userid" placeholder="Enter your User ID" required>
+                <input type="text" class="form-control" id="userid" name="userid" placeholder="Enter your User ID" [(ngModel)]="userid" required>
               </div>
   
               <!-- Password Field -->
               <div class="form-group mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your Password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password" [(ngModel)]="password" required>
+              </div>
+
+              <!-- Sign in Button -->
+              <div class="d-grid mb-3">
+                <button (click)="checkSubmit()" type="submit" class="btn btn-primary">Login</button>
               </div>
             </form>
   

@@ -10,7 +10,7 @@ export class ViewMedicinesService {
   constructor(private httpClient:HttpClient) { }
 
   private baseUrl = "http://localhost:8080/api/v3/medicine"
-
+ 
   getAllMedicines():Observable<Medicine[]>{
     return this.httpClient.get<Medicine[]>(`${this.baseUrl}`)
   }
