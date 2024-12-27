@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hms"
+    }
+  },
+  "defaultProject": "hms",
+  "cli": {
+    "analytics": false
+  }
 }
